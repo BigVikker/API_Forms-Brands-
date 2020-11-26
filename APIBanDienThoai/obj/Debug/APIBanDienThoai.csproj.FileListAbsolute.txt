@@ -1,0 +1,13 @@
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\bin\Debug\APIBanDienThoai.exe.config
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\bin\Debug\APIBanDienThoai.exe
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\bin\Debug\APIBanDienThoai.pdb
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\bin\Debug\Newtonsoft.Json.dll
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\bin\Debug\Newtonsoft.Json.xml
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.csprojAssemblyReference.cache
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.Form1.resources
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.Properties.Resources.resources
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.csproj.GenerateResource.cache
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.csproj.CoreCompileInputs.cache
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.csproj.CopyComplete
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.exe
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.pdb
