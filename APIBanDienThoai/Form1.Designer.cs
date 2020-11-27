@@ -32,13 +32,16 @@
             this.textBox_Brand = new System.Windows.Forms.TextBox();
             this.label_addBrand = new System.Windows.Forms.Label();
             this.button_addBrand = new System.Windows.Forms.Button();
+            this.button_Brand = new System.Windows.Forms.Button();
+            this.button_product = new System.Windows.Forms.Button();
+            this.button_customer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(69, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(68, 125);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(649, 313);
             this.dataGridView1.TabIndex = 0;
@@ -47,7 +50,7 @@
             // 
             // textBox_Brand
             // 
-            this.textBox_Brand.Location = new System.Drawing.Point(192, 30);
+            this.textBox_Brand.Location = new System.Drawing.Point(192, 84);
             this.textBox_Brand.Name = "textBox_Brand";
             this.textBox_Brand.Size = new System.Drawing.Size(349, 20);
             this.textBox_Brand.TabIndex = 1;
@@ -55,7 +58,7 @@
             // label_addBrand
             // 
             this.label_addBrand.AutoSize = true;
-            this.label_addBrand.Location = new System.Drawing.Point(66, 37);
+            this.label_addBrand.Location = new System.Drawing.Point(65, 87);
             this.label_addBrand.Name = "label_addBrand";
             this.label_addBrand.Size = new System.Drawing.Size(101, 13);
             this.label_addBrand.TabIndex = 2;
@@ -63,7 +66,7 @@
             // 
             // button_addBrand
             // 
-            this.button_addBrand.Location = new System.Drawing.Point(642, 26);
+            this.button_addBrand.Location = new System.Drawing.Point(642, 77);
             this.button_addBrand.Name = "button_addBrand";
             this.button_addBrand.Size = new System.Drawing.Size(75, 23);
             this.button_addBrand.TabIndex = 3;
@@ -71,11 +74,44 @@
             this.button_addBrand.UseVisualStyleBackColor = true;
             this.button_addBrand.Click += new System.EventHandler(this.button_addBrand_Click);
             // 
+            // button_Brand
+            // 
+            this.button_Brand.Location = new System.Drawing.Point(68, 25);
+            this.button_Brand.Name = "button_Brand";
+            this.button_Brand.Size = new System.Drawing.Size(98, 33);
+            this.button_Brand.TabIndex = 4;
+            this.button_Brand.Text = "Brand";
+            this.button_Brand.UseVisualStyleBackColor = true;
+            this.button_Brand.Click += new System.EventHandler(this.button_Brand_Click);
+            // 
+            // button_product
+            // 
+            this.button_product.Location = new System.Drawing.Point(350, 25);
+            this.button_product.Name = "button_product";
+            this.button_product.Size = new System.Drawing.Size(98, 33);
+            this.button_product.TabIndex = 5;
+            this.button_product.Text = "Product";
+            this.button_product.UseVisualStyleBackColor = true;
+            this.button_product.Click += new System.EventHandler(this.button_product_Click);
+            // 
+            // button_customer
+            // 
+            this.button_customer.Location = new System.Drawing.Point(619, 25);
+            this.button_customer.Name = "button_customer";
+            this.button_customer.Size = new System.Drawing.Size(98, 33);
+            this.button_customer.TabIndex = 6;
+            this.button_customer.Text = "Customer";
+            this.button_customer.UseVisualStyleBackColor = true;
+            this.button_customer.Click += new System.EventHandler(this.button_customer_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_customer);
+            this.Controls.Add(this.button_product);
+            this.Controls.Add(this.button_Brand);
             this.Controls.Add(this.button_addBrand);
             this.Controls.Add(this.label_addBrand);
             this.Controls.Add(this.textBox_Brand);
@@ -95,6 +131,9 @@
         private System.Windows.Forms.TextBox textBox_Brand;
         private System.Windows.Forms.Label label_addBrand;
         private System.Windows.Forms.Button button_addBrand;
+        private System.Windows.Forms.Button button_Brand;
+        private System.Windows.Forms.Button button_product;
+        private System.Windows.Forms.Button button_customer;
     }
 }
 

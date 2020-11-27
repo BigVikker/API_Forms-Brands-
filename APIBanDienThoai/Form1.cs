@@ -28,6 +28,9 @@ namespace APIBanDienThoai
         }
         private async void update_DataGridView()
         {
+            button_product.BackColor = Color.White;
+            button_customer.BackColor = Color.White;
+            button_Brand.BackColor = Color.Orange;
             dataGridView1.Columns.Clear();
             dataGridView1.DataSource = null;
             string url = GlobalVariable.url + "api/brand";
@@ -52,7 +55,8 @@ namespace APIBanDienThoai
 
         private async void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5)
+            MessageBox.Show(" "+ e.ColumnIndex + ", " + e.RowIndex);
+            if (e.ColumnIndex == 5 && this.button_Brand.BackColor == Color.Orange)
             {
                 var idBrand = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string url = GlobalVariable.url + "api/brand/delete?id=" + idBrand;
@@ -85,7 +89,7 @@ namespace APIBanDienThoai
                 }
                 update_DataGridView();
             }
-            if (e.ColumnIndex == 4)
+            if (e.ColumnIndex == 4 && this.button_Brand.BackColor == Color.Orange)
             {
                 if (isClick == false)
                 {
@@ -140,7 +144,76 @@ namespace APIBanDienThoai
                     isClick = false;
                 }
             }
-            
+            // delete product
+            if (e.ColumnIndex == 9  && this.button_product.BackColor == Color.Orange)
+            {
+                var idBrand = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string url = GlobalVariable.url + "api/product/delete?id=" + idBrand;
+                DialogResult dialogResult = MessageBox.Show("Ban co muon xoa Brand hay khong ?", "Canh Bao", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        var client = new HttpClient();
+                        //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AdminController.AdminToken);
+                        client.BaseAddress = new Uri(url);
+                        var response = await client.DeleteAsync(url);
+                        if (response.IsSuccessStatusCode)
+                        {
+                            MessageBox.Show("Xoa Thanh Cong");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Khong Thanh Cong");
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Khong Thanh Cong");
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //Unknow
+                }
+                update_DataGridView_Product();
+            }
+
+            // delete Customer
+            if (e.ColumnIndex == 13 && this.button_customer.BackColor == Color.Orange)
+            {
+                var idBrand = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string url = GlobalVariable.url + "api/customer/delete?id=" + idBrand;
+                DialogResult dialogResult = MessageBox.Show("Ban co muon xoa Brand hay khong ?", "Canh Bao", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        var client = new HttpClient();
+                        //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AdminController.AdminToken);
+                        client.BaseAddress = new Uri(url);
+                        var response = await client.DeleteAsync(url);
+                        if (response.IsSuccessStatusCode)
+                        {
+                            MessageBox.Show("Xoa Thanh Cong");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Khong Thanh Cong");
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Khong Thanh Cong");
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //Unknow
+                }
+                update_DataGridView_Customer();
+            }
+
         }
 
         private async void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -180,6 +253,71 @@ namespace APIBanDienThoai
             update_DataGridView();
         }
 
-        
+        private async void update_DataGridView_Product()
+        {
+            button_product.BackColor = Color.Orange;
+            button_customer.BackColor = Color.White;
+            button_Brand.BackColor = Color.White;
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = null;
+            string url = GlobalVariable.url + "api/product/getall";
+            string json = await new GlobalVariable().GetApiAsync(url);
+            var list = JsonConvert.DeserializeObject<List<PRODUCT>>(json);
+            dataGridView1.DataSource = list;
+            dataGridView1.ReadOnly = true;
+
+            DataGridViewButtonColumn btn_Sua = new DataGridViewButtonColumn();
+            dataGridView1.Columns.Add(btn_Sua);
+            btn_Sua.HeaderText = "Chinh Sua";
+            btn_Sua.Text = "Chinh Sua";
+            btn_Sua.UseColumnTextForButtonValue = true;
+
+            DataGridViewButtonColumn btn_Xoa = new DataGridViewButtonColumn();
+            dataGridView1.Columns.Add(btn_Xoa);
+            btn_Xoa.HeaderText = "Xoa";
+            btn_Xoa.Text = "Xoa Product";
+            btn_Xoa.UseColumnTextForButtonValue = true;
+
+        }
+        private void button_product_Click(object sender, EventArgs e)
+        {
+            update_DataGridView_Product();
+        }
+
+        private async void update_DataGridView_Customer()
+        {
+            button_product.BackColor = Color.White;
+            button_customer.BackColor = Color.Orange;
+            button_Brand.BackColor = Color.White;
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = null;
+            string url = GlobalVariable.url + "api/customer/getall";
+            string json = await new GlobalVariable().GetApiAsync(url);
+            var list = JsonConvert.DeserializeObject<List<CUSTOMER>>(json);
+            dataGridView1.DataSource = list;
+            dataGridView1.ReadOnly = true;
+
+            DataGridViewButtonColumn btn_Sua = new DataGridViewButtonColumn();
+            dataGridView1.Columns.Add(btn_Sua);
+            btn_Sua.HeaderText = "Chinh Sua";
+            btn_Sua.Text = "Chinh Sua";
+            btn_Sua.UseColumnTextForButtonValue = true;
+
+            DataGridViewButtonColumn btn_Xoa = new DataGridViewButtonColumn();
+            dataGridView1.Columns.Add(btn_Xoa);
+            btn_Xoa.HeaderText = "Xoa";
+            btn_Xoa.Text = "Xoa Customer";
+            btn_Xoa.UseColumnTextForButtonValue = true;
+
+        }
+        private void button_customer_Click(object sender, EventArgs e)
+        {
+            update_DataGridView_Customer();
+        }
+
+        private void button_Brand_Click(object sender, EventArgs e)
+        {
+            update_DataGridView();
+        }
     }
 }

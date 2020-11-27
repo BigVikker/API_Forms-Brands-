@@ -56,7 +56,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ADMIN.cs" />
     <Compile Include="Models\BRAND.cs" />
+    <Compile Include="Models\CUSTOMER.cs" />
+    <Compile Include="Models\PRODUCT.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
