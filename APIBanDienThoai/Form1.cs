@@ -55,7 +55,7 @@ namespace APIBanDienThoai
 
         private async void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(" "+ e.ColumnIndex + ", " + e.RowIndex);
+            ///MessageBox.Show(" "+ e.ColumnIndex + ", " + e.RowIndex);
             if (e.ColumnIndex == 5 && this.button_Brand.BackColor == Color.Orange)
             {
                 var idBrand = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -221,37 +221,7 @@ namespace APIBanDienThoai
             
         }
 
-        private async void button_addBrand_Click(object sender, EventArgs e)
-        {
-            if (textBox_Brand.Text != "")
-            {
-                var json = JsonConvert.SerializeObject(new BRAND() { BrandName = textBox_Brand.Text });
-                var data = new StringContent(json, Encoding.UTF8, "application/json");
-                string url = GlobalVariable.url + "api/brand/create";
-                try
-                {
-                    var client = new HttpClient();
-                    client.BaseAddress = new Uri(url);
-                    var response = await client.PostAsync(url, data);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        MessageBox.Show("Succes");
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Fail");
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Fail");
-                }
-            }
-            else MessageBox.Show("Fail");
-            textBox_Brand.Text = "";
-            update_DataGridView();
-        }
+        
 
         private async void update_DataGridView_Product()
         {

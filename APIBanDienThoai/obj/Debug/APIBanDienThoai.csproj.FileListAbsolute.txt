@@ -11,3 +11,4 @@ C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDien
 C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.csproj.CopyComplete
 C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.exe
 C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.pdb
+C:\Users\conso\source\repos\APIBanDienThoai\APIBanDienThoai\obj\Debug\APIBanDienThoai.loginForm.resources

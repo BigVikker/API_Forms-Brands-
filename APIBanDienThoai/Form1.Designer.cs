@@ -29,56 +29,28 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox_Brand = new System.Windows.Forms.TextBox();
-            this.label_addBrand = new System.Windows.Forms.Label();
-            this.button_addBrand = new System.Windows.Forms.Button();
             this.button_Brand = new System.Windows.Forms.Button();
             this.button_product = new System.Windows.Forms.Button();
             this.button_customer = new System.Windows.Forms.Button();
+            this.label_quanLy = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(68, 125);
+            this.dataGridView1.Location = new System.Drawing.Point(305, 82);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(649, 313);
+            this.dataGridView1.Size = new System.Drawing.Size(801, 313);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // textBox_Brand
-            // 
-            this.textBox_Brand.Location = new System.Drawing.Point(192, 84);
-            this.textBox_Brand.Name = "textBox_Brand";
-            this.textBox_Brand.Size = new System.Drawing.Size(349, 20);
-            this.textBox_Brand.TabIndex = 1;
-            // 
-            // label_addBrand
-            // 
-            this.label_addBrand.AutoSize = true;
-            this.label_addBrand.Location = new System.Drawing.Point(65, 87);
-            this.label_addBrand.Name = "label_addBrand";
-            this.label_addBrand.Size = new System.Drawing.Size(101, 13);
-            this.label_addBrand.TabIndex = 2;
-            this.label_addBrand.Text = "Enter Brand To Add";
-            // 
-            // button_addBrand
-            // 
-            this.button_addBrand.Location = new System.Drawing.Point(642, 77);
-            this.button_addBrand.Name = "button_addBrand";
-            this.button_addBrand.Size = new System.Drawing.Size(75, 23);
-            this.button_addBrand.TabIndex = 3;
-            this.button_addBrand.Text = "Add Brand";
-            this.button_addBrand.UseVisualStyleBackColor = true;
-            this.button_addBrand.Click += new System.EventHandler(this.button_addBrand_Click);
-            // 
             // button_Brand
             // 
-            this.button_Brand.Location = new System.Drawing.Point(68, 25);
+            this.button_Brand.Location = new System.Drawing.Point(43, 82);
             this.button_Brand.Name = "button_Brand";
-            this.button_Brand.Size = new System.Drawing.Size(98, 33);
+            this.button_Brand.Size = new System.Drawing.Size(164, 110);
             this.button_Brand.TabIndex = 4;
             this.button_Brand.Text = "Brand";
             this.button_Brand.UseVisualStyleBackColor = true;
@@ -86,9 +58,9 @@
             // 
             // button_product
             // 
-            this.button_product.Location = new System.Drawing.Point(350, 25);
+            this.button_product.Location = new System.Drawing.Point(43, 198);
             this.button_product.Name = "button_product";
-            this.button_product.Size = new System.Drawing.Size(98, 33);
+            this.button_product.Size = new System.Drawing.Size(164, 84);
             this.button_product.TabIndex = 5;
             this.button_product.Text = "Product";
             this.button_product.UseVisualStyleBackColor = true;
@@ -96,25 +68,32 @@
             // 
             // button_customer
             // 
-            this.button_customer.Location = new System.Drawing.Point(619, 25);
+            this.button_customer.Location = new System.Drawing.Point(43, 288);
             this.button_customer.Name = "button_customer";
-            this.button_customer.Size = new System.Drawing.Size(98, 33);
+            this.button_customer.Size = new System.Drawing.Size(164, 107);
             this.button_customer.TabIndex = 6;
             this.button_customer.Text = "Customer";
             this.button_customer.UseVisualStyleBackColor = true;
             this.button_customer.Click += new System.EventHandler(this.button_customer_Click);
             // 
+            // label_quanLy
+            // 
+            this.label_quanLy.AutoSize = true;
+            this.label_quanLy.Location = new System.Drawing.Point(329, 23);
+            this.label_quanLy.Name = "label_quanLy";
+            this.label_quanLy.Size = new System.Drawing.Size(72, 13);
+            this.label_quanLy.TabIndex = 7;
+            this.label_quanLy.Text = "label_QuanLy";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1176, 450);
+            this.Controls.Add(this.label_quanLy);
             this.Controls.Add(this.button_customer);
             this.Controls.Add(this.button_product);
             this.Controls.Add(this.button_Brand);
-            this.Controls.Add(this.button_addBrand);
-            this.Controls.Add(this.label_addBrand);
-            this.Controls.Add(this.textBox_Brand);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -128,12 +107,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox_Brand;
-        private System.Windows.Forms.Label label_addBrand;
-        private System.Windows.Forms.Button button_addBrand;
         private System.Windows.Forms.Button button_Brand;
         private System.Windows.Forms.Button button_product;
         private System.Windows.Forms.Button button_customer;
+        private System.Windows.Forms.Label label_quanLy;
     }
 }
 

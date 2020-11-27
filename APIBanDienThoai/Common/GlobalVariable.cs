@@ -11,7 +11,7 @@ namespace APIBanDienThoai.Common
 {
     public class GlobalVariable
     {
-        public const string url = "https://localhost:44319/";
+        public const string url = "http://phonemushroom.somee.com/";
         public async Task<string> GetApiAsync(string posturl)
         {
             using (HttpClient httpClient = new HttpClient())
